@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Work+Sans:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-seconday: "Work Sans", sans-serif;
+  --color-primary-normal: #ff8784;
+  --color-primary-dark: #3d3b4f;
+  --color-secondary-normal: #fff8ed;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  font-family: var(--ff-seconday);
+  display: grid;
+  background-color: var(--color-secondary-normal);
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+.skip-link:focus {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  margin: 1em;
+  border: 3px solid white;
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  margin-top: 0.25em;
+  fill: none;
+}
+/* Styling */
+
+a {
+  color: inherit;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    35deg,
+    var(--color-primary-normal) 50%,
+    var(--color-primary-dark) 50%
+  );
+  text-align: center;
+  height: 90vh;
+}
+
+header .container {
+  padding-bottom: 10rem;
+}
+
+header .link-github {
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  stroke: var(--color-primary-dark);
+  stroke-width: 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-normal);
+  border-radius: 2px;
+}
+
+header .link-github:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-normal);
+  stroke: var(--color-primary-normal);
+}
+
+header h1 {
+  margin: 0 0 2%;
+  -webkit-text-stroke: 2px var(--color-secondary-normal);
+  color: rgba(0, 0, 0, 0);
+  font-size: clamp(2.5rem, 10vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  font-weight: 900;
+}
+
+header h2 {
+  color: var(--color-primary-normal);
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  background-color: var(--color-secondary-normal);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+header p {
+  color: var(--color-secondary-normal);
+  margin-bottom: 5px;
+}
+
+nav {
+  position: sticky;
+  top: 0; /* required */
+  height: 10vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary-dark);
+  border-top: 1px solid var(--color-primary-dark);
+  border-bottom: 1px solid var(--color-primary-dark);
+  background-color: var(--color-secondary-normal);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  text-decoration: none;
+  list-style: none;
+  gap: 5%;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+#main {
+  padding-top: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+strong {
+  color: var(--color-primary-dark);
+}
+
+#main h2,
+#main h3 {
+  color: var(--color-primary-dark);
+}
+
+.page-footer .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: var(--color-primary-normal);
+}
